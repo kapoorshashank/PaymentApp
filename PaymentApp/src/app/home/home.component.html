@@ -1,0 +1,18 @@
+<div class="box">
+    <div>
+<h4>List of Payments</h4>
+<div *ngIf ="payments">
+<div *ngFor="let payment of payments | async; let i=index">
+  <span >{{i+1}}.</span> 
+  {{payment.cardHolder}}
+  {{payment.cardNumber}}
+  {{payment.cvv}}
+  {{payment.expDate}}
+  {{payment.amount}}
+
+
+</div>
+<a routerLink="/payment">Click here for Payment!</a>
+</div>
+</div>
+</div>

@@ -1,0 +1,33 @@
+<div class = 'box'>  <div class="Payment">
+    <h2 class="payment-header">Payment Info</h2>
+    <form [formGroup]="paymentForm" class="payment-container" (ngSubmit)="payment()">
+  
+      <p [ngClass]="{ 'has-error': isSubmitted && formControls.cardNumber.errors }">
+        <input type="text" placeholder="Credit Card Number" formControlName="cardNumber">
+      </p>
+      <p [ngClass]="{ 'has-error': isSubmitted && formControls.cardHolder.errors }">
+        <input type="text" placeholder="Card Holder" formControlName="cardHolder">
+      </p>
+  
+      <p [ngClass]="{ 'has-error': isSubmitted && formControls.expDate.errors }">
+        <input type="text" placeholder="Expiration Date" formControlName="expDate">
+      </p>
+      <p [ngClass]="{ 'has-error': isSubmitted && formControls.cvv.errors }">
+        <input type="text" placeholder="Security Code" formControlName="cvv">
+      </p>
+      <p [ngClass]="{ 'has-error': isSubmitted && formControls.amount.errors }">
+        <input type="text" placeholder="Amount" formControlName="amount">
+      </p>
+  
+ 
+  
+  
+      <p>
+        <input type="submit" value="Submit">
+      </p>
+      <p>
+        <input type="button" value="Go Back" routerLink="/home">
+      </p>
+    </form>
+  </div>
+</div>
